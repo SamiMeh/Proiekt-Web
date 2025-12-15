@@ -5,34 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiceRoll</title>
     <link rel="stylesheet" href="/style/style.css">
-    <script src="js.js"></script>
+
 </head>
 <body>
     <header >
+
         <div>
         <img src="/img/DiceRoll.png" alt="logo.png" id="logo.png" class="logo">
         </div>
         <div class="placeholder-div">
         <input type="text" placeholder="Kërko " id="placeholder" >
         </div>
+            <nav class="navigationbar">
+                        <a href="#Game-id"> Games</a>
+                        <a href="#Help">Help</a>
+            </nav>
+        
         <div class="Login-div">
         <button id="Login-button"  onclick="location.href='login.html'" >Login </button>
         <button id="Register-button" onclick="location.href='register.html'">Register</button>
         </div>
     </header>
     <hr>
-    <div class="slider">
+    <div class="slider" >
     <div class="slides">
 
-        <div class="slide active">
-            <div class="slide-content">
+        <div class="slide active" style="background-image: url(/img/banner3.jpg);">
+            <div class="slide-content" >
                 <h1>Behu pjes e lojes tone</h1>
                 <p>Deri me daten 27.12.2025</p>
                 <button>Join now</button>
             </div>
         </div>
 
-        <div class="slide">
+        <div class="slide" style="background-image: url(/img/banner1.jpg);">
             <div class="slide-content">
                 <h1>WIN BIG REWARDS</h1>
                 <p>Compete with top players</p>
@@ -40,7 +46,7 @@
             </div>
         </div>
 
-        <div class="slide">
+        <div class="slide" style="background-image: url(/img/banne2.jpg);">
             <div class="slide-content">
                 <h1>REDEEM YOUR CHIPS</h1>
                 <p>Fast and secure payouts</p>
@@ -59,6 +65,38 @@
         <span class="dot" onclick="goToSlide(2)"></span>
     </div>
 </div>
+<br> 
+<br>
+<hr>
+  <section id="Game-id" class="games-selection">
+    
+    <h2>Games</h2>
+
+    <div class="game-grid">
+     <a href="mines.html" class="games-card">
+     <img src="/img/main.avif" alt="mineimg">
+    
+        </a>
+
+
+        <a href="dice.html" class="games-card">
+            <img src="/img/dice.avif" alt="Diceimg">
+          
+        </a>
+
+        <a href="flip.html" class="games-card">
+            <img src="/img/flip.avif" alt="flipimg">
+        
+        </a>
+
+        <a href="blacjack.html" class="games-card">
+            <img src="/img/blackjack.webp" alt="blacjackimg">
+       
+        </a>
+    </div>
+
+
+  </section>
 
 <script src="slider.js"></script>
 </body>

@@ -1,3 +1,6 @@
+.html{
+    scroll-behavior: smooth;
+}
 body{
     padding: 0;
     margin: 0;
@@ -60,6 +63,17 @@ body {
     background-color: #0e0f2b;
     font-family: Arial, sans-serif;
 }
+ .navigationbar a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    padding-right: 30px;
+}
+
+.navigationbar {
+    display: flex;
+    margin-left: 200px;
+}
 
 .slider {
     position: relative;
@@ -86,6 +100,10 @@ body {
     padding: 40px;
     box-sizing: border-box;
     color: white;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slide-content {
@@ -93,11 +111,13 @@ body {
 }
 
 .slide-content h1 {
+    color:white;
     font-size: 32px;
     margin-bottom: 10px;
 }
 
 .slide-content p {
+    color: white;
     font-size: 18px;
     margin-bottom: 20px;
     opacity: 0.8;
@@ -153,3 +173,29 @@ body {
 .dot.active {
     background-color: white;
 }
+
+
+.games-selection{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    color: white;
+
+}
+.game-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.games-card{
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+
+}
+.games-card img {
+    width: 250px;
+    height: auto;
+}
+
