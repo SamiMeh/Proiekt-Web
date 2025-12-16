@@ -111,13 +111,13 @@ body {
 }
 
 .slide-content h1 {
-    color:white;
+    color:crimson;
     font-size: 32px;
     margin-bottom: 10px;
 }
 
 .slide-content p {
-    color: white;
+    color: crimson;
     font-size: 18px;
     margin-bottom: 20px;
     opacity: 0.8;
