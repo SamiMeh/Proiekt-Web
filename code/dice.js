@@ -6,8 +6,6 @@ const rollBtn = document.getElementById("rollBtn");
 const resultEl = document.getElementById("result");
 const betInput = document.getElementById("betAmount");
 
-// house edge (optional)
-const HOUSE_EDGE = 0.99;
 
 function updateOdds() {
     const rollOver = parseInt(slider.value);
@@ -37,5 +35,5 @@ rollBtn.addEventListener("click", () => {
     }
 });
 
-// init
+
 updateOdds();
