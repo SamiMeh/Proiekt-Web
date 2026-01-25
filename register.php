@@ -1,0 +1,29 @@
+<?php ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+   
+    <title>login</title>
+</head>
+<body >
+    <button  id="button-exit" onclick="location.href='index.php'" >X</button>
+    <div class="Register-div">
+    <div class="register-form">
+    <h1 id="h1"> Register</h1>
+    <input type="email" placeholder="Email" id="email">
+    <br>
+    <input type="date" placeholder="Date Of Birth" id="dateofbirth">
+    <br>
+    <input type="password" placeholder="Password" id="password">
+    <br>
+    <input type="password" placeholder="Confirm Password" id="passwordconfirm">
+    <br>
+    <button id="Register-button" onclick="location.href='index.php'">Register</button>
+    </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

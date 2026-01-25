@@ -1,0 +1,24 @@
+<?php ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body >
+       <button  id="button-exit" onclick="location.href='index.php'" >x</button>
+    <div class="Login-div">
+    <div class="login-form">
+    <h1 id="h1"> Login</h1>
+    <input type="email" placeholder="Email" id="email">
+    <br>
+    <input type="password" placeholder="Password" id="password">
+    <br>
+    <button id="Login-button" onclick="location.href='index.php'">Login</button>
+    </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
