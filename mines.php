@@ -1,4 +1,10 @@
-<?php ?>
+<?php 
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: register.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,5 +38,9 @@
 </div>
 
 <script src="mine-game.js"></script>
+<script>
+    // Pass login status to JavaScript
+    document.body.dataset.loggedIn = 'true';
+</script>
 </body>
 </html>

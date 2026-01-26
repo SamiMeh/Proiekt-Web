@@ -39,6 +39,13 @@
             rangeEnd.addEventListener('input', updateBar);
 
             rollBtn.addEventListener("click", () => {
+                // Check if user is logged in (backup check)
+                if (!document.body.dataset.loggedIn || document.body.dataset.loggedIn !== 'true') {
+                    alert('Please register or login to play!');
+                    window.location.href = 'register.php';
+                    return;
+                }
+                
                 const bet = parseFloat(betAmount.value);
                 
                 if (bet <= 0 || isNaN(bet)) {

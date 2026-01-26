@@ -69,4 +69,12 @@ function revealAllMines() {
     });
 }
 
-betBtn.addEventListener("click", startGame);
+betBtn.addEventListener("click", () => {
+    // Check if user is logged in (backup check)
+    if (!document.body.dataset.loggedIn || document.body.dataset.loggedIn !== 'true') {
+        alert('Please register or login to play!');
+        window.location.href = 'register.php';
+        return;
+    }
+    startGame();
+});

@@ -6,6 +6,7 @@ const rollBtn = document.getElementById("rollBtn");
 const resultEl = document.getElementById("result");
 const betInput = document.getElementById("betAmount");
 
+const HOUSE_EDGE = 0.98; // 2% house edge
 
 function updateOdds() {
     const rollOver = parseInt(slider.value);
@@ -20,6 +21,13 @@ function updateOdds() {
 slider.addEventListener("input", updateOdds);
 
 rollBtn.addEventListener("click", () => {
+    // Check if user is logged in (backup check)
+    if (!document.body.dataset.loggedIn || document.body.dataset.loggedIn !== 'true') {
+        alert('Please register or login to play!');
+        window.location.href = 'register.php';
+        return;
+    }
+    
     const bet = parseFloat(betInput.value);
     if (bet <= 0 || isNaN(bet)) return;
 

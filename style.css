@@ -1,79 +1,155 @@
-.html{
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     padding: 0;
     margin: 0;
     background-color: #15153D;
-}
-header{
-    background-color: #15153D;
-    display: flex;
-    align-items: center;   
-}
-.logo{
-     max-height:100px ;
-    width: auto;
-    }
-.placeholder-div{
-  width: 40%;
-  padding-left: 100px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-#placeholder {   
+header {
+    background-color: #15153D;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.logo {
+    max-height: 100px;
+    width: auto;
+    margin-left: 20px;
+}
+
+.placeholder-div {
+    width: 40%;
+    padding-left: 100px;
+}
+
+#placeholder {
     outline: none;
     width: 100%;
     padding: 10px;
     font-size: 17px;
-    border: 2px rgb(31, 31, 176);
+    border: 2px solid rgb(31, 31, 176);
     border-radius: 10px;
     box-sizing: border-box;
-    background-color:#31317c;
-    color: white;
-}
-.Login-div{
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-    margin-left: auto;
-}
-#Login-button{
-    margin-left: 100px;
-    cursor: pointer;
-    padding: 15px 20px;
-    border-radius: 9px;
     background-color: #31317c;
     color: white;
-    border-radius: 2px #31317c;
-    border: none;
-    font-size: 15px;
 }
-#Register-button{
-    border-radius: 9px;
-    padding: 15px 20px;
-    cursor: pointer;
-    margin-right: 50px;
-    background-color: #FB4B3E;
-    color: white;
-    border: none;
-    font-size: 15px;
-}
-body {
-    margin: 0;
-    background-color: #0e0f2b;
-    font-family: Arial, sans-serif;
-}
- .navigationbar a {
-    text-decoration: none;
-    color:rgb(255, 255, 255);
-    font-weight: bold;
-    padding-right: 30px;
+
+#placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .navigationbar {
     display: flex;
     margin-left: 200px;
 }
+
+.navigationbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding-right: 30px;
+    transition: color 0.3s ease;
+}
+
+
+
+.Login-div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+#Login-button {
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 9px;
+    background-color: #31317c;
+    color: white;
+    border: 2px solid #31317c;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(49, 49, 124, 0.3);
+}
+
+#Login-button:hover {
+    background-color: #e63a2b;
+    border-color: #e63a2b;
+    box-shadow: 0 6px 12px rgba(230, 58, 43, 0.5);
+    transform: translateY(-2px);
+}
+
+#Login-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(230, 58, 43, 0.3);
+}
+
+#Register-button {
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 9px;
+    background-color: #31317c;
+    color: white;
+    border: 2px solid #31317c;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(49, 49, 124, 0.3);
+}
+
+#Register-button:hover {
+    background-color: #e63a2b;
+    border-color: #e63a2b;
+    box-shadow: 0 6px 12px rgba(230, 58, 43, 0.5);
+    transform: translateY(-2px);
+}
+
+#Register-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(230, 58, 43, 0.3);
+}
+
+#Logout-button {
+    cursor: pointer !important;
+    padding: 15px 20px !important;
+    border-radius: 9px !important;
+    background-color: #FB4B3E !important;
+    color: white !important;
+    border: 2px solid #FB4B3E !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 8px rgba(251, 75, 62, 0.4) !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+#Logout-button:hover {
+    background-color: #e63a2b !important;
+    border-color: #e63a2b !important;
+    box-shadow: 0 6px 12px rgba(230, 58, 43, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+#Logout-button:active {
+    transform: translateY(0px) !important;
+    box-shadow: 0 2px 4px rgba(230, 58, 43, 0.3) !important;
+}
+
+
 
 .slider {
     position: relative;
@@ -90,6 +166,7 @@ body {
     display: flex;
     height: 100%;
     transition: transform 0.6s ease;
+    width: 100%;
 }
 
 .slide {
@@ -100,10 +177,10 @@ body {
     padding: 40px;
     box-sizing: border-box;
     color: white;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
 }
 
 .slide-content {
@@ -111,7 +188,7 @@ body {
 }
 
 .slide-content h1 {
-    color:crimson;
+    color: crimson;
     font-size: 32px;
     margin-bottom: 10px;
 }
@@ -131,33 +208,47 @@ body {
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+
 
 .slide img {
     max-height: 250px;
+    width: auto;
 }
 
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
     font-size: 28px;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
-.arrow.left { left: 15px; }
-.arrow.right { right: 15px; }
+
+
+.arrow.left {
+    left: 15px;
+}
+
+.arrow.right {
+    right: 15px;
+}
 
 .dots {
     position: absolute;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 .dot {
@@ -168,34 +259,53 @@ body {
     display: inline-block;
     margin: 0 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #999;
 }
 
 .dot.active {
     background-color: white;
 }
 
-
-.games-selection{
+.games-selection {
     max-width: 1200px;
     margin: 50px auto;
     padding: 0 20px;
     color: white;
-
 }
-.game-grid{
+
+.games-selection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.game-grid {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.games-card{
+.games-card {
     border-radius: 12px;
     padding: 20px;
     text-align: center;
     text-decoration: none;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1a1a40;
 }
+
+.games-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(251, 75, 62, 0.3);
+}
+
 .games-card img {
     width: 250px;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
-
