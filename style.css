@@ -69,6 +69,28 @@ header {
     margin-right: 50px;
 }
 
+.Admin-dashboard-link {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 9px;
+    background-color: #31317c;
+    color: white;
+    border: 2px solid #31317c;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(49, 49, 124, 0.3);
+}
+
+.Admin-dashboard-link:hover {
+    background-color: #e63a2b;
+    border-color: #e63a2b;
+    color: white;
+    box-shadow: 0 6px 12px rgba(230, 58, 43, 0.5);
+    transform: translateY(-2px);
+}
+
 #Login-button {
     cursor: pointer;
     padding: 15px 20px;
@@ -120,33 +142,33 @@ header {
 }
 
 #Logout-button {
-    cursor: pointer !important;
-    padding: 15px 20px !important;
-    border-radius: 9px !important;
-    background-color: #FB4B3E !important;
-    color: white !important;
-    border: 2px solid #FB4B3E !important;
-    font-size: 15px !important;
-    font-weight: bold !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 8px rgba(251, 75, 62, 0.4) !important;
-    display: inline-block !important;
-    text-decoration: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 9px;
+    background-color: #FB4B3E;
+    color: white;
+    border: 2px solid #FB4B3E;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(251, 75, 62, 0.4);
+    display: inline-block;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 #Logout-button:hover {
-    background-color: #e63a2b !important;
-    border-color: #e63a2b !important;
-    box-shadow: 0 6px 12px rgba(230, 58, 43, 0.6) !important;
-    transform: translateY(-2px) !important;
+    background-color: #e63a2b;
+    border-color: #e63a2b;
+    box-shadow: 0 6px 12px rgba(230, 58, 43, 0.6);
+    transform: translateY(-2px);
 }
 
 #Logout-button:active {
-    transform: translateY(0px) !important;
-    box-shadow: 0 2px 4px rgba(230, 58, 43, 0.3) !important;
+    transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(230, 58, 43, 0.3);
 }
 
 
@@ -284,28 +306,27 @@ header {
 
 .game-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 0;
     justify-content: center;
+    align-items: stretch;
 }
 
 .games-card {
     border-radius: 12px;
-    padding: 20px;
+    padding: 0;
     text-align: center;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #1a1a40;
-}
-
-.games-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(251, 75, 62, 0.3);
+    background: none;
+    border: none;
+    outline: none;
+    flex-shrink: 0;
 }
 
 .games-card img {
-    width: 250px;
-    height: 200px;
-    object-fit: cover;
+    width: 350px;
+    height: 300px;
+    object-fit: contain;
     border-radius: 8px;
+    display: block;
 }
